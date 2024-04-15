@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --color:#222831;
+    --color2:#393E46;
+    --color3:#FFD369;
+    --color4:#EEEEEE;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+	margin:0; padding:0;
+	box-sizing: border-box;
+	outline: none; border:none;
+	text-decoration: none;
+	text-transform: initial;
+	transition: .2s linear;
+    font-size: 12px;
+}
+
+/* ---------- html ---------- */
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 9rem;
+	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+	width: .8rem;
+}
+
+html::-webkit-scrollbar-track
+{
+	background: transparent;
+}
+
+html::-webkit-scrollbar-thumb
+{
+	background: #fff;
+	border-radius: 5rem;
+}
+
+/* Login Form */
+.login-home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #EEEDEE;
+    background-size:cover;
+	background-position:center;
+	margin-top: 0rem;
+}
+
+.login-home .login-wrapper{
+    background: #000000;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 12px;
+    padding: 40px 50px;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.login-home .login-wrapper h1{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.login-home .login-wrapper .linput-box{
+    position: relative;
+    margin: 15px 0;
+}
+
+.login-home .linput-box input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: #FFD369;
+    text-transform: initial;
+}
+
+.login-home .linput-box i{
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-30%);
+    font-size: 15px;
+    color: #FFD369;
+}
+
+.login-home .btn{
+    width: 60%;
+    height: 40px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #FFD369 0%, #FFD369 100%);
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(255, 255, 255, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #222831;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.login-home .btn:hover{
+    background: linear-gradient(90deg, #EEEDEE 0%, #EEEDEE 100%);
+}
+
+.login-home .register-link{
+    
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.login-home .register-link p{
+    text-transform: initial;
+    font-size: 14.5px;
+}
+
+.login-home .register-link p a{
+    color: #D5CEA3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14.5px;
+}
+
+.login-home .register-link p a:hover{
+    text-decoration: underline;
+}
+
+
+.alert-success {
+    display: block;
+    margin: 10px 0;
+    background: #b3f5b5;
+    font-size: 20px;
+    /* color: var(--text-color); */
+    color: #4CAF50;
+    border-color: #b3f5b5;
+}
+
+.alert-error {
+    display: block;
+    margin: 10px 0;
+    background: rgb(255, 169, 169);
+    font-size: 18px;
+    color: crimson;
+    border-color: crimson;
+}
+

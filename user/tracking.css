@@ -1,0 +1,647 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --color:#222831;
+    --color2:#393E46;
+    --color3:#FFD369;
+    --color4:#EEEEEE;
+    --border: .1rem solid rgba(255,255,255,.3);
+    --border2: .1rem solid rgba(17, 17, 17, 0.3);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+	margin:0; padding:0;
+	box-sizing: border-box;
+	outline: none; border:none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+}
+
+/* ---------- html ---------- */
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 9rem;
+	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+	width: .8rem;
+}
+
+html::-webkit-scrollbar-track
+{
+	background: transparent;
+}
+
+html::-webkit-scrollbar-thumb
+{
+	background: #fff;
+	border-radius: 5rem;
+}
+
+/* body background */
+body{
+	background: var(--color4);
+}
+
+/* Section */
+section{
+    padding: 2rem 7%;
+}
+
+/* Header */
+.header{
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img
+{
+    height: 10rem;
+    margin-bottom: 1rem;
+    border-radius: 15rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: #FFD369;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover{
+    color: var(--color4);
+    border-bottom: .1rem solid var(--border);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #FFD369;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--color4);
+}
+
+/* hide menu button */
+.icons .fas.fa-bars{
+    display: none;
+}
+
+/* active for JavaScripts */
+.user-box.active {
+    display: block;
+    transform: scale(1);
+}
+
+/* User box login */
+.user-box{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background: #000000;
+    border: 1px solid #000000;
+    padding: 20px;
+    box-shadow: var(--border);
+    text-align: center;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.user-box p{
+    margin: 10px 0;
+    word-wrap: break-word; 
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    max-width: 100%;
+    font-size: 1.5rem;
+    color: var(--color4);
+    font-weight: bolder;
+}
+
+.user-box .btn {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 37px;
+    border-radius: 5px;
+    color:var(--color3);
+    background:var(--color2);
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size:1.7rem;
+}
+
+.user-box .btn:hover{
+    letter-spacing: .2rem;
+}
+
+
+/* search form icon */
+.header .search-form
+{
+	position:absolute;
+	top:115%; right:7%;
+	background:#000000;
+	width:50rem;
+	height:5rem;
+	display:flex;
+	align-items:center;
+	transform:scaleY(0);
+	transform-origin:top;
+    
+}
+
+#search-box{
+    background: #000000;
+}
+
+.header .search-form.active{
+	transform:scaleY(1);
+}
+
+.header .search-form input{
+	height:100%;
+	width:100%;
+	font-size:1.6rem;
+	color:var(--color4);
+	padding:1rem;
+	text-transform:none;
+}
+
+.header .search-form label{
+	cursor:pointer;
+	font-size:2.2rem;
+	margin-right:1.5rem;
+	color:var(--color4);
+}
+
+.header .search-form label:hover{
+	color:var(--color3);
+}
+
+/* home section */
+.home-track{
+	min-height:120vh;
+	display:flex;
+    justify-content: center;
+	align-items: center;
+    background:url(../pics/BackgrounDe.png) no-repeat;
+	background-size:cover;
+	background-position:center;
+    background-position:center;
+}
+
+.home-track .content-track{
+	max-width:60rem;
+    text-align: center;
+}
+
+.home-track .content-track h1{
+	font-size:6rem;
+	text-transform:uppercase;
+	color:#fff;
+}
+
+.home-track .content-track span{
+	color:var(--color3);
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+
+.tracking-dtl{
+    background-color: #EEEDDE;
+	padding: 40px 0;
+	text-align: center;
+}
+
+.tracking-dtl .heading{
+    text-align:center;
+	color:#000000;
+	text-transform:uppercase;
+	padding-bottom:3.5rem;
+	font-size:4rem;
+}
+
+.tracking-dtl .heading span{
+    text-align:center;
+	color:goldenrod;
+	text-transform:uppercase;
+	padding-bottom:3.5rem;
+	font-size:4rem;
+}
+
+.tracking-dtl p{
+    text-align:center;
+	color:#000000;
+	font-size:16px;
+    text-transform: initial;
+}
+
+
+.order-details {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px dashed #9c9c9c;
+    border-radius: 8px;
+}
+
+.order-details h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #bbb;
+}
+
+.order-details h3, .order-details p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.order-details p {
+    padding-left: 1rem;
+}
+
+.order-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.order-details ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.order-details ul li:last-child {
+    border-bottom: none;
+}
+
+.order-details ul li span {
+    font-weight: bold;
+}
+
+/* Style for order details table */
+.order-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+
+.order-details th, .order-details td {
+    padding: 10px;
+    text-align: left;
+}
+
+.order-details th {
+    background-color: #cecece;
+    color: #333;
+    font-size: 11px;
+}
+
+.order-details td {
+    border-bottom: 1px solid #ddd;
+    font-size: 11px;
+}
+
+.order-details tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.order-details tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.order-details tfoot td {
+    font-weight: bold;
+}
+
+.order-details tfoot td:first-child {
+    text-align: right;
+}
+
+.tracking-prog{
+    background-color: #EEEDDE;
+	padding: 40px 0;
+	text-align: center;
+}
+
+.tracking-prog .heading{
+    text-align:center;
+	color:#000000;
+	text-transform:uppercase;
+	padding-bottom:3.5rem;
+	font-size:4rem;
+}
+
+.tracking-prog .heading span{
+    text-align:center;
+	color:goldenrod;
+	text-transform:uppercase;
+	padding-bottom:3.5rem;
+	font-size:4rem;
+}
+
+/* Progress Tracking Section */
+.tracking-prog .order-status {
+    margin-bottom: 20px;
+}
+
+.tracking-prog .order-status h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px; /* Add padding around the progress bar */
+    border: 2px solid goldenrod; /* Add border around the entire progress bar */
+    border-radius: 8px; /* Optional: Round the corners of the progress bar border */
+    background-color: #e4e6e7; /* Optional: Add a light background color */
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.progress-step.active i,
+.progress-step.active p {
+    color: goldenrod; /* Highlight color */
+}
+
+.progress-step i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.progress-bar-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #aaa;
+    margin: 0 10px;
+}
+
+.progress-bar-line.filled {
+    background-color: goldenrod; /* Highlight color */
+}
+
+
+
+
+
+
+
+/* Footer */
+footer{
+    position: absolute;
+    background: #000000;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #FFD369;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    color: #EEEEEE;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: initial;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #FFD369;
+    font-size: 18px;
+}
+
+.socials a i{
+    font-size:1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover{
+    color: #EEEEEE;
+}
+
+.footer-bottom{
+    background-color: #222831;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #EEEEEE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px)
+{
+	html{
+		font-size:55%;
+	}
+	
+	.header{
+		padding:1.5rem 2rem;
+	}
+	
+	section
+
+    {
+	    padding:2rem;
+    }
+
+    .reservation form .inputBox .input{
+    	width: 78%;
+
+    }
+
+    .reservation form .inputBox .input textarea{
+    	width: calc(78% + 110px);
+    }
+
+    .reserve-book .input textarea{
+	  width: calc(100% + 320px);
+	  height: 7rem;
+    }
+
+    .image img{
+    	width: 100%;
+    }
+}
+
+@media (max-width:768px)
+{
+	#menu-button
+	{
+		display:inline-block;
+	}
+	
+	.header .navbar
+	{
+		position:absolute;
+		top:100%; right:-100%;
+		background:#000000;
+		width:30rem;
+		height:calc(100vh - 9.5rem);
+	}
+	
+	.header .navbar.active
+	{
+		right:0;
+		
+	}
+	
+	.header .navbar a
+	{
+		color:var(--color3);
+		display:block;
+		margin:1.5rem;
+		padding:.5rem;
+		font-size:2rem;
+        text-transform: capitalize;
+	}
+	
+	.header .search-form
+	{
+		width:90%;
+		right:2rem;
+	}
+	
+	.home
+	{
+		background-position:left;
+		justify-content:center;
+		text-align:center;
+	}
+	
+	.text1
+	{
+		font-size:4.5rem;
+	}
+	
+	.text2
+	{
+		font-size:4.5rem;
+	}
+	
+	.home .content p
+	{
+		font-size:1.5rem;
+	}
+}
+
+@media (max-width:450px)
+{
+	html{
+		font-size:50%;
+	}
+	
+}
