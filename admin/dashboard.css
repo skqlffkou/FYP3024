@@ -1,0 +1,211 @@
+:root {
+    --main-bg-color: #FFF8E1;
+    --accent-color: #F9E4B7;
+    --hover-accent-color: #E1C699;
+    --text-color: #5A4A42;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+}
+
+.sidenav {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.5s;
+    font-size: 16px; /* Adjust base font size if needed */
+}
+
+.sidenav a {
+    color: var(--text-color);
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.sidenav a:hover {
+    background-color: var(--text-color); /* Change to desired hover background color */
+    color: var(--main-bg-color); /* Change text color on hover if needed */
+}
+
+.sidenav a i {
+    width: 20px; /* Ensures icon width is consistent */
+    text-align: center;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.logo {
+    color: #FFF; /* Adjust the color to fit your design */
+    background-color: var(--text-color); /* Background color for the logo section, change as needed */
+    padding: 20px 10px; 
+    font-family: 'Arial', sans-serif; /* Use a font that matches your app's design */
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 20px; /* Adds some space below the logo for separation */
+    border-bottom: 2px solid #444; /* Adds a subtle line to separate from the rest of the menu */
+}
+
+.logo span {
+    font-weight: bold; 
+    display: block; 
+    font-size: 1.4em; /* Adjusts the size of the D'DANAU text */
+    margin-bottom: 5px; 
+}
+
+
+/* Enhanced welcome section styling */
+.welcome {
+    text-align: center;
+    padding: 40px 20px; 
+    background-color: #ffffff; 
+    margin-bottom: 50px;
+    border-bottom: 3px solid #eee; /* Add a subtle border for visual separation */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+
+.profile .dropbtn {
+    color: var(--text-color);
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--text-color); 
+    color: var(--main-bg-color); 
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.welcome h1 {
+    color: var(--text-color);
+    font-size: 27px; 
+    font-weight: bold; /* Bold but not too heavy */
+    text-transform: none; 
+    margin: 0;
+    line-height: 1.2; 
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    flex: 0 1 calc(33.33% - 20px);
+    text-align: center;
+    width: calc(50% - 40px);
+    margin: 20px;
+    padding: 20px;
+    background: #FFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box i {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--accent-color); 
+    color: var(--text-color);
+    font-size: 14px;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 100px;
+    }
+
+    .sidenav a {
+        text-align: center;
+    }
+
+    #main {
+        margin-left: 100px;
+    }
+
+    .box {
+        width: calc(100% - 40px);
+    }
+}

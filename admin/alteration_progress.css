@@ -1,0 +1,238 @@
+:root {
+    --main-bg-color: #FFF8E1;
+    --accent-color: #F9E4B7;
+    --hover-accent-color: #E1C699;
+    --text-color: #5A4A42;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+}
+
+.sidenav {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.5s;
+    font-size: 16px; 
+}
+
+.sidenav a {
+    color: var(--text-color);
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.sidenav a:hover {
+    background-color: var(--text-color); 
+    color: var(--main-bg-color); 
+}
+
+.sidenav a i {
+    width: 20px; 
+    text-align: center;
+    margin-right: 10px; 
+}
+
+.logo {
+    color: #FFF; 
+    background-color: var(--text-color); 
+    padding: 20px 10px; 
+    font-family: 'Arial', sans-serif; 
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #444; /* Adds a subtle line to separate from the rest of the menu */
+}
+
+.logo span {
+    font-weight: bold; /* Makes D'DANAU text bold */
+    display: block; /* Ensures the text appears on a new line */
+    font-size: 1.4em; 
+    margin-bottom: 5px; 
+}
+
+/* Enhanced welcome section styling */
+.welcome {
+    text-align: center;
+    padding: 40px 20px; 
+    background-color: #ffffff; 
+    margin-bottom: 50px;
+    border-bottom: 3px solid #eee; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+
+.profile .dropbtn {
+    color: var(--text-color);
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--text-color); /* Change to desired hover background color */
+    color: var(--main-bg-color); 
+}
+
+/* Table Styles */
+.orders-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #FFF8E1; /* Light background to match the theme */
+}
+
+.orders-table th, .orders-table td {
+    border: 1px solid #F9E4B7; /* Accent color for borders */
+    text-align: left;
+    padding: 8px;
+    color: var(--text-color); /* Text color for readability */
+}
+
+.orders-table th {
+    background-color: var(--text-color); 
+    color: white; /* White text for contrast */
+}
+
+.orders-table tr:nth-child(even) {
+    background-color: var(--hover-accent-color); 
+}
+
+
+
+.orders-table .status-dropdown {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px; 
+    padding: 5px;
+    cursor: pointer; 
+    width: auto; 
+    margin-right: 10px;
+}
+
+.orders-table .status-dropdown:focus {
+    outline: none;
+    border-color: var(--hover-accent-color);
+}
+
+
+
+.orders-table .status-dropdown option {
+    background-color: #f9f9f9; 
+    color: var(--text-color); 
+}
+
+.orders-table .status-dropdown option:checked {
+    background-color: #E1C699;
+    color: var(--text-color);
+}
+
+.status-update-btn {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    border: 1px solid var(--hover-accent-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px; 
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+}
+
+.status-update-btn:hover {
+    background-color: var(--text-color);
+    color: var(--main-bg-color);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--accent-color); 
+    color: var(--text-color);
+    font-size: 14px;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 100px;
+    }
+
+    .sidenav a {
+        text-align: center;
+    }
+
+    #main {
+        margin-left: 100px;
+    }
+
+    .box {
+        width: calc(100% - 40px);
+    }
+}

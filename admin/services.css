@@ -1,0 +1,326 @@
+:root {
+    --main-bg-color: #FFF8E1;
+    --accent-color: #F9E4B7;
+    --hover-accent-color: #E1C699;
+    --text-color: #5A4A42;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+}
+
+.sidenav {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.5s;
+    font-size: 16px; 
+}
+
+.sidenav a {
+    color: var(--text-color);
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.sidenav a:hover {
+    background-color: var(--text-color); 
+    color: var(--main-bg-color); 
+}
+
+.sidenav a i {
+    width: 20px; 
+    text-align: center;
+    margin-right: 10px;
+}
+
+.logo {
+    color: #FFF; 
+    background-color: var(--text-color); 
+    padding: 20px 10px; /* Adjust the padding to increase/decrease space */
+    font-family: 'Arial', sans-serif; 
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 20px; /* Adds some space below the logo for separation */
+    border-bottom: 2px solid #444; 
+}
+
+.logo span {
+    font-weight: bold; /* Makes D'DANAU text bold */
+    display: block; /* Ensures the text appears on a new line */
+    font-size: 1.4em; /* Adjusts the size of the D'DANAU text */
+    margin-bottom: 5px; /* Adds a little space between D'DANAU and the tagline */
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.profile .dropbtn {
+    color: var(--text-color);
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--text-color); 
+    color: var(--main-bg-color); /* Change text color on hover if needed */
+}
+
+/* FORM */
+.form-container {
+    background: var(--accent-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group button[type="submit"] {
+    background-color: var(--text-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    text-transform: uppercase ;
+    display: block;
+    margin: auto;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: var(--hover-accent-color);
+    color: var(--text-color);
+}
+
+.form-group input[type="file"]::file-selector-button {
+    background-color: var(--text-color);
+    color: var(--main-bg-color);
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 10px; /* Ensures spacing between the button and file name */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group input[type="file"]{
+    background-color: #FFF;
+}
+
+/* Table Styling */
+.services-table-container {
+    width: 90%; /* Adjust based on preference */
+    margin: 20px auto;
+    overflow-x: auto; 
+    background-color: var(--main-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+.services-table-container h2{
+    color: var(--text-color);
+    text-align: center;
+}
+
+#servicesTable {
+    width: 100%; 
+    color: var(--text-color);
+    table-layout: auto; 
+}
+
+#servicesTable thead {
+    background-color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+#servicesTable th,
+#servicesTable td {
+    text-align: left; /* Adjust text alignment as needed */
+    padding: 12px; /* Adjust padding for spacing */
+    border-bottom: 1px solid var(--hover-accent-color); 
+}
+
+#servicesTable th {
+    position: sticky;
+    top: 0;
+    z-index: 2; 
+}
+
+#servicesTable img {
+    width: 100px; 
+    height: auto;
+    border-radius: 4px; 
+}
+
+/* Table Actions Styling */
+.actions-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.edit-btn, .delete-btn {
+    text-decoration: none; 
+    color: var(--main-bg-color); 
+    border-radius: 4px; 
+    font-weight: bold; /* Maintains bold text for emphasis */
+    font-size: 0.9em; /* Ensures font size is consistent with the rest of the design */
+    display: inline-block; /* Allows for padding and width adjustments */
+    margin: 0 5px; /* Adds a slight space between the buttons */
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-btn{
+    background-color: green; /* Uses the accent color for edit button */
+    padding: 8px 11px;
+}
+
+
+
+.delete-btn {
+    background-color: red; /* A softer red tone that fits within your color scheme */
+    padding: 8px 12px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    filter: brightness(85%); /* Slightly darkens the button on hover for feedback */
+}
+
+.alert {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+    transition: opacity 0.6s;
+    text-align: center;
+}
+
+.alert-success {
+    background: #d7ffd9;
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.alert-error {
+    color: crimson;
+    border-color: crimson;
+    background: rgb(255, 169, 169);
+}
+
+
+
+
+/* FOOTER */
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--accent-color); 
+    color: var(--text-color);
+    font-size: 14px;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}

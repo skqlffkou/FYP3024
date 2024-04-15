@@ -1,0 +1,120 @@
+:root {
+    --main-bg-color: #FFF8E1;
+    --accent-color: #F9E4B7;
+    --hover-accent-color: #E1C699;
+    --text-color: #5A4A42;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--main-bg-color);
+    background-size: cover;
+    background-position: center;
+    margin-top: 0rem;
+}
+
+.login-home .login-wrapper {
+    background: var(--accent-color);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    border-radius: 12px;
+    padding: 40px 50px;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.login-home .login-wrapper h1{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-home .login-wrapper .linput-box{
+    position: relative;
+    margin: 15px 0;
+}
+
+.login-home .linput-box input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(59, 59, 59, 0.2);
+    border-radius: 40px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-transform: initial;
+}
+
+.login-home .linput-box i {
+    color: var(--text-color);
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-30%);
+    font-size: 15px;
+}
+
+.login-home .btn {
+    background: var(--text-color);
+    color: var(--main-bg-color);
+    width: 60%;
+    height: 40px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(255, 255, 255, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.login-home .btn:hover {
+    background: #bba174;
+    color: var(--text-color);
+}
+
+.login-home .register-link p{
+    text-transform: initial;
+    margin-top: 10px;
+}
+
+
+.login-home .register-link p a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-home .tegister-link p a:hover {
+    text-decoration: underline;
+}
+
+
+.success {
+    display: block;
+    margin: 10px 0;
+    background: #b3f5b5;
+    font-size: 20px;
+    color: #4CAF50;
+    border-color: #b3f5b5;
+}
+
+.error {
+    display: block;
+    margin: 10px 0;
+    background: rgb(255, 169, 169);
+    font-size: 18px;
+    color: crimson;
+    border-color: crimson;
+}
